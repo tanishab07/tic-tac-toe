@@ -3,32 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tic-tac-toe</title>
-    <link rel="stylesheet" href="style.css"/>
+    <title>Tic Tac Toe | Game</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <div class="msgcontainer hide">
-        <p id="msg">winner</p>
-        <button id="newbtn">new Game</button>
+     <!-- HEADER -->
+    <header class="top-bar">
+        <div class="game-logo">
+            <span>✕</span>
+            <span>TIC TAC TOE</span>
+            <span>○</span>
+        </div>
+    </header>
+    
+    <!-- MAIN -->
+    <main class="mymain">
+        <h1 id="heading">Tic-Tac-Toe Game</h1>
+
+        <!-- GAME MODE -->
+    <div class="mode-selector">
+        <label for="gameMode">Choose Game Mode</label>
+
+        <select id="gameMode">
+            <option value="two-player">Two-Player Mode</option>
+            <option value="ai">Play Against AI</option>
+        </select>
     </div>
 
-    <main class="mymain">
-        <h1>Tic-Tac-Toe Game</h1>
-        <div class="container">
-        <div class="game">
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-        </div>
-        </div>
-            <button id="resetbtn">reset game</button>
+         <!-- SCORE -->
+        <section class="score-board">
+            <div class="score-box player-score">
+                <span class="score-symbol">X</span>
+                <p>You</p>
+                <strong id="playerScore">0</strong>
+            </div>
+
+            <div class="score-box draw-score">
+                <span class="score-symbol">=</span>
+                <p>Draws</p>
+                <strong id="drawScore">0</strong>
+            </div>
+
+            <div class="score-box player2-score">
+                <span class="score-symbol">O</span>
+                <p>player2</p>
+                <strong id="player2Score">0</strong>
+            </div>
+        </section>
+        
+        <!-- GAME-BOARD -->
+        <section>
+            <div class="container">
+                <div class="game">
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- BUTTONS -->
+        <section class="game-btn">
+            <button id="new-btn" class="primary-btn">
+                New Round
+            </button>
+
+            <button id="reset-btn" class="secondary-btn">
+                Reset Score
+            </button>
+        </section>
     </main>
+    
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            Tic Tac Toe • You play X • Player2 plays O
+        </p>
+    </footer>
+
     <script src ="script.js"></script>
+
 </body>
 </html>
