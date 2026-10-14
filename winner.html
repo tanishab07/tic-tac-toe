@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe | Result</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <!-- HEADER -->
+    <header class="top-bar">
+        <div class="game-logo">
+            <span>✕</span>
+            <span>TIC TAC TOE</span>
+            <span>○</span>
+        </div>
+    </header>
+
+     <!-- MAIN -->
+    <main class="result-page">
+        <div id="resultIcon" class="result-icon">
+            🏆
+        </div>
+
+        <p class="small-label">
+            ROUND COMPLETE
+        </p>
+
+        <h1 id="resultTitle">
+            You Win!
+        </h1>
+
+        <p id="resultMessage">
+            Congratulations!
+        </p>
+
+        
+        <!-- SCORE ON RESULT PAGE -->
+        <section class="result-score">
+            <div>
+                <span>You</span>
+                <strong id="playerScore">0</strong>
+            </div>
+
+            <div>
+                <span>Draws</span>
+                <strong id="drawScore">0</strong>
+            </div>
+
+            <div>
+                <span>PLAYER2</span>
+                <strong id="player2Score">0</strong>
+            </div>
+        </section>
+
+         <!-- BUTTONS -->
+        <div class="result-buttons">
+            <button id="playAgainBtn" class="primary-btn">
+                Play Again
+            </button>
+
+            <button id="resultResetBtn" class="secondary-btn">
+                Reset Score
+            </button>
+        </div>
+        
+    </main>
+
+     <!-- FOOTER -->
+    <footer>
+        <p>
+            Ready for another round?
+        </p>
+    </footer>
+    
+    <script src="script.js"></script>
+
+    
+<script>
+    const savedScores = JSON.parse(
+        localStorage.getItem("ticTacToeScores") ||
+        '{"user1":0,"draws":0,"user2":0}'
+    );
+
+    document.getElementById("playerScore").textContent =
+        savedScores.user1 ?? 0;
+
+    document.getElementById("drawScore").textContent =
+        savedScores.draws ?? 0;
+
+    document.getElementById("player2Score").textContent =
+        savedScores.user2 ?? 0;
+</script>
+
+</body>
+</html>
