@@ -68,8 +68,3 @@ tic-tac-toe/
 BCA Student | Aspiring Full Stack Developer
 
 This project is part of my journey of learning programming and building practical projects.
-
-## License
-
-This project is available for learning and personal use. See the `LICENSE` file if a formal license has been added.
-
