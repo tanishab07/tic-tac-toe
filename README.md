@@ -4,9 +4,7 @@ An interactive Tic Tac Toe game built using HTML, CSS, and JavaScript. It featur
 
 ## Play the Game
 
-**[Click here to play Tic Tac Toe](YOUR_GITHUB_PAGES_LINK)**
-
-*Replace the link above with your published game URL after enabling GitHub Pages.*
+**[Click here to play Tic Tac Toe] (https://tanishab07.github.io/tic-tac-toe/)**
 
 ## Project Preview
 
